@@ -1,0 +1,4 @@
+mode_processing.c:16:6:modify_red	8	static
+mode_processing.c:27:6:modify_yellow	8	static
+mode_processing.c:38:6:modify_green	8	static
+mode_processing.c:49:6:mode_processing	8	static
