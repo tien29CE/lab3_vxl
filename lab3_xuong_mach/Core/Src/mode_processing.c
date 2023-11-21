@@ -10,7 +10,6 @@
 #include "normal_mode.h"
 #include "mode_processing.h"
 #include "input_reading.h"
-#include "7seg.h"
 #include "input_processing.h"
 
 void modify_red(){

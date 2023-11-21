@@ -5,7 +5,6 @@
  *      Author: Admin
  */
 #include "main.h"
-#include "7seg.h"
 #include "normal_mode.h"
 #include "mode_processing.h"
 
@@ -20,38 +19,38 @@ void seven_segment_state(void){
 		if(mode_and_time == 0){
 			switch(mode){
 				case Modify_red:
-					display7SEG(led_time_buffer[RED]);
+//					display7SEG(led_time_buffer[RED]);
 					break;
 				case Modify_yellow:
-					display7SEG(led_time_buffer[YELLOW]);
+//					display7SEG(led_time_buffer[YELLOW]);
 					break;
 				case Modify_green:
-					display7SEG(led_time_buffer[GREEN]);
+//					display7SEG(led_time_buffer[GREEN]);
 					break;
 				default:
 					break;
 			}
-			HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, RESET);
-			HAL_GPIO_WritePin(EN_1_GPIO_Port,EN_1_Pin, SET);
+//			HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, RESET);
+//			HAL_GPIO_WritePin(EN_1_GPIO_Port,EN_1_Pin, SET);
 			mode_and_time = 1;
 		}else{
-			display7SEG(mode);
-			HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, SET);
-			HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, RESET);
+//			display7SEG(mode);
+//			HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, SET);
+//			HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, RESET);
 			mode_and_time = 0;
 		}
 	}else{
 		switch(hori_verti_state){
 			case HORI:
-				display7SEG(horizontal_countdown);
-				HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, RESET);
-				HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, SET);
+//				display7SEG(horizontal_countdown);
+//				HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, RESET);
+//				HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, SET);
 				hori_verti_state = VERTI;
 				break;
 			case VERTI:
-				display7SEG(vertical_countdown);
-				HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, SET);
-				HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, RESET);
+//				display7SEG(vertical_countdown);
+//				HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, SET);
+//				HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, RESET);
 				hori_verti_state = HORI;
 				break;
 			default:
