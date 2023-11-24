@@ -50,6 +50,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -58,53 +60,27 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define BUTTON_0_Pin GPIO_PIN_0
-#define BUTTON_0_GPIO_Port GPIOC
-#define BUTTON_2_Pin GPIO_PIN_2
-#define BUTTON_2_GPIO_Port GPIOC
-#define BUTTON_1_Pin GPIO_PIN_3
-#define BUTTON_1_GPIO_Port GPIOC
-#define B_0_Pin GPIO_PIN_2
-#define B_0_GPIO_Port GPIOA
-#define A_0_Pin GPIO_PIN_3
-#define A_0_GPIO_Port GPIOA
-#define EN_0_Pin GPIO_PIN_7
-#define EN_0_GPIO_Port GPIOA
-#define D_0_Pin GPIO_PIN_4
-#define D_0_GPIO_Port GPIOC
-#define F_1_Pin GPIO_PIN_1
-#define F_1_GPIO_Port GPIOB
-#define TFL_00_Pin GPIO_PIN_2
-#define TFL_00_GPIO_Port GPIOB
-#define C_1_Pin GPIO_PIN_10
-#define C_1_GPIO_Port GPIOB
-#define TFL_11_Pin GPIO_PIN_11
+#define BUTTON_3_Pin GPIO_PIN_0
+#define BUTTON_3_GPIO_Port GPIOA
+#define BUTTON_0_Pin GPIO_PIN_1
+#define BUTTON_0_GPIO_Port GPIOA
+#define BUTTON_1_Pin GPIO_PIN_4
+#define BUTTON_1_GPIO_Port GPIOA
+#define HORN_Pin GPIO_PIN_6
+#define HORN_GPIO_Port GPIOA
+#define BUTTON_2_Pin GPIO_PIN_0
+#define BUTTON_2_GPIO_Port GPIOB
+#define PDL_0_Pin GPIO_PIN_10
+#define PDL_0_GPIO_Port GPIOB
+#define PDL_1_Pin GPIO_PIN_8
+#define PDL_1_GPIO_Port GPIOA
+#define TFL_00_Pin GPIO_PIN_10
+#define TFL_00_GPIO_Port GPIOA
+#define TFL_01_Pin GPIO_PIN_3
+#define TFL_01_GPIO_Port GPIOB
+#define TFL_11_Pin GPIO_PIN_4
 #define TFL_11_GPIO_Port GPIOB
-#define EN_1_Pin GPIO_PIN_12
-#define EN_1_GPIO_Port GPIOB
-#define G_0_Pin GPIO_PIN_13
-#define G_0_GPIO_Port GPIOB
-#define B_1_Pin GPIO_PIN_14
-#define B_1_GPIO_Port GPIOB
-#define D_1_Pin GPIO_PIN_15
-#define D_1_GPIO_Port GPIOB
-#define TFL_01_Pin GPIO_PIN_7
-#define TFL_01_GPIO_Port GPIOC
-#define HORN_Pin GPIO_PIN_9
-#define HORN_GPIO_Port GPIOC
-#define E_1_Pin GPIO_PIN_8
-#define E_1_GPIO_Port GPIOA
-#define G_1_Pin GPIO_PIN_9
-#define G_1_GPIO_Port GPIOA
-#define C_0_Pin GPIO_PIN_10
-#define C_0_GPIO_Port GPIOA
-#define E_0_Pin GPIO_PIN_3
-#define E_0_GPIO_Port GPIOB
-#define A_1_Pin GPIO_PIN_4
-#define A_1_GPIO_Port GPIOB
-#define F_0_Pin GPIO_PIN_5
-#define F_0_GPIO_Port GPIOB
-#define TFL_10_Pin GPIO_PIN_6
+#define TFL_10_Pin GPIO_PIN_5
 #define TFL_10_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 

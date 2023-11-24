@@ -24,6 +24,7 @@ Core/Src/input_processing.o: ../Core/Src/input_processing.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/input_reading.h ../Core/Inc/input_processing.h \
  ../Core/Inc/input_reading.h ../Core/Inc/normal_mode.h \
  ../Core/Inc/input_processing.h ../Core/Inc/mode_processing.h
@@ -79,6 +80,8 @@ Core/Src/input_processing.o: ../Core/Src/input_processing.c \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 
 ../Core/Inc/input_reading.h:
 

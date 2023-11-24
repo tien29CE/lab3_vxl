@@ -64,8 +64,8 @@ all: main-build
 main-build: lab3_xuong_mach.elf secondary-outputs
 
 # Tool invocations
-lab3_xuong_mach.elf: $(OBJS) $(USER_OBJS) C:\Computer\ engineering\ study\3th\ year\Semester\ 1\Microprocessors-Microcontrollers\STM_workspace\lab3\lab3_xuong_mach\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "lab3_xuong_mach.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Computer engineering study\3th year\Semester 1\Microprocessors-Microcontrollers\STM_workspace\lab3\lab3_xuong_mach\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3_xuong_mach.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+lab3_xuong_mach.elf: $(OBJS) $(USER_OBJS) C:\Users\Lan\ Vi\Downloads\lab3_vxl-lab3_xuong_mach\lab3_vxl-lab3_xuong_mach\lab3_xuong_mach\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lab3_xuong_mach.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Lan Vi\Downloads\lab3_vxl-lab3_xuong_mach\lab3_vxl-lab3_xuong_mach\lab3_xuong_mach\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3_xuong_mach.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
